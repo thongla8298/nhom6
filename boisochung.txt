@@ -1,0 +1,43 @@
+#include<iostream>
+#include <map>
+#include <set>
+#include <math.h>
+using namespace std;
+ 
+ 
+int main(){
+    int a = 5, b = 7, lcm;
+    map<int, int> ma, mb;
+    set<int> s;
+    
+    for(int i = 2; a < i; ++i){
+        while(a % i == 0){
+            ma[i]++;
+            a /= i;
+            s.insert(i);
+        }
+    }
+    if(a > 1) {
+        ma[a]++;
+        s.insert(a);
+    }
+    
+    for(int i = 2; b < i; ++i){
+        while(b % i == 0){
+            mb[i]++;
+            b /= i;
+            s.insert(i);
+        }
+    }
+    if(b > 1) {
+        mb[b]++;
+        s.insert(b);
+    }
+    
+    lcm = 1;
+    for(auto it : s){
+        lcm *= pow(it, max(ma[it], mb[it]));
+    }
+    printf("BCNN(%d, %d) = %d", a, b, lcm);
+}
+ 
