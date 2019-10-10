@@ -1,31 +1,48 @@
-int USCLN(int a, int b)
+int BSC(int so1, int so2,int max)
 {
-	while(a!=b)
-		if(a>b)
-			a=a-b;
-		else
-			b=b-a;
-	return a;
+	cout << "Nhap so thu nhat: ";
+    	cin >> so1;
+    	cout << "Nhap so thu hai: ";
+    	cin >> so2;
+    	if(so1 == 0 || so2 == 0) {
+        	cout << so1 << " va " << so2 << " khong co boi chung nho nhat" << endl;
+    	} else {
+        	if(so1 > so2) {
+            		max = so1;
+        	} else {
+           		 max = so2;
+        	}
+ 
+        int i = max;
+         
+        while(1)
+        {
+            if(i % so1 == 0 && i % so2 == 0)
+            {
+                bcnn = i;
+                break;
+            }
+            i += max;
+        }
+        cout << "Boi chung nho nhat cua " << so1 << " va " << so2 << " la " << bcnn << endl;
+    }
+    return 0;
 }
-<<<<<<< HEAD
+
 void Thong ()
 {
 	cout << "Xin Chào T";
-=======
 void thu()
 {
 	cout<<"helooooooo";
->>>>>>> 8b8f6fdd72196b91d9c975c08a79bd1118938509
+
 }
-<<<<<<< HEAD
 void thuy()
 {
 	cout << " hello ";
 }
-=======
-
 void thien()
 {
 	cout<<"thien";
 }
->>>>>>> 5aa03ceebf24f77daf9ac5b33c26ae070efb6384
+
