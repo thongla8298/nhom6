@@ -17,3 +17,7 @@ void thu()
 	cout<<"helooooooo";
 >>>>>>> 8b8f6fdd72196b91d9c975c08a79bd1118938509
 }
+void thuy()
+{
+	cout << " hello ";
+}
