@@ -11,3 +11,8 @@ void thu()
 {
 	cout<<"helooooooo";
 }
+
+void thien()
+{
+	cout<<"thien";
+}
